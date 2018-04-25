@@ -1,4 +1,4 @@
-Для запуска программы уже готовый Docker-контейнер лежит в  Repos/nivkhi-geno-17/blob/master/Dockerfil.
+Для запуска программы существует уже готовый [Docker-контейнер](https://gitlab.com/stasundr/nivkhi-geno-17/blob/master/Dockerfile).
  1. Чтобы посмотерть уже готовые образы контейнеров набираем sudo docker images
  2. Заходим в подготовленный docker контейнер: sudo docker run -it -v ~/datasets:/data --rm treemixs
  3. Входными данными для treemix выступает таблица с частотами аллелей для кадого ОНП в определенной популяции. Длина столбца равна количеству ОНП.
@@ -28,8 +28,4 @@ treemix -i ~/path/to/newfile.gz -k 500 -root Yoruba -m 3 -o ~/path/to/output
 2. npm init -y namescript.js (создаем json)
 3. pkg namescript.js (упаковывает скрипт для разных ОП)
 После этого наш скрипт будет работать в docker.
-Для визуализации результатов скрипта ипользуем R. С сервера в  папку на рабочем столе скачиваем plotting_funcs.R и в нее же загружаем результаты программы. В R пишем код:
-
-setwd ("/Users/katya/Desktop/treemix")
-source("/Users/katya/Desktop/treemix/plotting_funcs.R")
-plot_tree("treemix.14.1")
+Для визуализации результатов скрипта ипользуем R. С сервера в  папку на рабочем столе скачиваем plotting_funcs.R и в нее же загружаем результаты программы.
